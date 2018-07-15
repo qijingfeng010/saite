@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+        ul{
+        	list-style:none;
+        }
+        ul>li{
+        	width: 40px;
+        	height: 40px;
+        	border:1px solid red;
+        	position: relative;
+        }
+        ul>li>div>img{
+        	width: 40px;
+        	height: 40px;
+        }
+         .box1,.box2{
+         	position: absolute;
+         }
+         .box1{
+         	display: none;
+
+         }
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li><div class="box1"><img src="http://activity.dapuimg.com/dapu_20161013_huiyuan.png"></div>
+		<div class="box2"><img src="http://activity.dapuimg.com/dapu_201510150001-top.png"></div></li>
+		<li><div class="box1"><img src="http://activity.dapuimg.com/dapu_20161013_huiyuan.png"></div>
+		<div class="box2"><img src="http://activity.dapuimg.com/dapu_201510150001-top.png"></div></li>
+		<li><div class="box1"><img src="http://activity.dapuimg.com/dapu_20161013_huiyuan.png"></div>
+		<div class="box2"><img src="http://activity.dapuimg.com/dapu_201510150001-top.png"></div></li>
+		<li><div class="box1"><img src="http://activity.dapuimg.com/dapu_20161013_huiyuan.png"></div>
+		<div class="box2"><img src="http://activity.dapuimg.com/dapu_201510150001-top.png"></div></li>
+		<li><div class="box1"><img src="http://activity.dapuimg.com/dapu_20161013_huiyuan.png"></div>
+		<div class="box2"><img src="http://activity.dapuimg.com/dapu_201510150001-top.png"></div></li>
+	</ul>
+</body>
+</html>
+<script>
+var 
+	var box1=document.querySelectorAll('.box1')
+	var box2=document.querySelectorAll('.box2')
+	var oul=document.querySelector('ul')
+	oul.onmouseover=function(e){
+		var e=e||event;
+		var target=e.target||e.srcElement;
+		console.log(target)
+		if(target.className=='box2'||target.ta){
+			console.log(target)
+			target.style.display='none';
+			// target.siblings().style.display="block"
+		}
+	}
+</script>
